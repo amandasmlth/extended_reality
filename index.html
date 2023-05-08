@@ -1,20 +1,50 @@
+
+Sure, here's an example of a simple A-Frame virtual reality scene of the beach:
+
+php
+Copy code
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>Getting Started with VR</title>
-    <meta name="description" content="Getting Started with VR">
     <meta charset="utf-8">
-    <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+    <title>Beach VR Scene</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   </head>
   <body>
-    <!-- We'll be adding content mostly here! -->
     <a-scene>
-        <a-sky color="#000"></a-sky>
-        <a-sphere id="sphere1" position="0 1.25 -5" radius="1.25" color="#42f"></a-sphere>
-      </a-scene>
-      <a-entity
-      text="value: Hello, Virtual Reality!; color: #BBB"
-      position="-0.9 0.2 -3"
-      scale="1.5 1.5 1.5"></a-entity>
+      <!-- Sky -->
+      <a-sky color="#6cd4ff"></a-sky>
+      
+      <!-- Ground -->
+      <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#d2b48c"></a-plane>
+      
+      <!-- Sun -->
+      <a-sphere position="0 10 -30" radius="5" color="#fff200"></a-sphere>
+      
+      <!-- Palm Tree -->
+      <a-entity position="10 0 -20">
+        <a-cylinder height="10" radius="1" color="#8b4513"></a-cylinder>
+        <a-cone position="0 10 0" height="10" radius-bottom="5" radius-top="0" color="#008000"></a-cone>
+      </a-entity>
+      
+      <!-- Beach Umbrella -->
+      <a-entity position="-10 0 -20">
+        <a-cylinder height="6" radius="2" color="#ff0000"></a-cylinder>
+        <a-cylinder height="1" radius="3" color="#fff"></a-cylinder>
+      </a-entity>
+      
+      <!-- Beach Chair -->
+      <a-entity position="0 0 -10">
+        <a-box width="3" height="1" depth="3" color="#8b4513"></a-box>
+        <a-box position="-2.5 1 0" width="1" height="2" depth="1" color="#fff"></a-box>
+        <a-box position="2.5 1 0" width="1" height="2" depth="1" color="#fff"></a-box>
+      </a-entity>
+      
+      <!-- Camera -->
+      <a-entity position="0 1.6 0">
+        <a-camera></a-camera>
+      </a-entity>
+      
+    </a-scene>
   </body>
 </html>
